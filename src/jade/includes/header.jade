@@ -1,13 +1,25 @@
 // header
-.page__header
+.page__main-header
 	.container
-		p(style="font-family: fontmain") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontmain; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontsecond") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontsecond; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontthird") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontthird; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfour") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfour; font-weight: bold") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfive") Сьешь еще этих мягких французсих булок
-		p(style="font-family: fontfive; font-weight: bold") Сьешь еще этих мягких французсих булок
+		.main-header
+			.column-row
+				.column
+					a(href="/").main-logo
+						img(src="img/logo.png", alt="KDL")
+						img(src="img/small-logo.png", alt="KDL").mobile-logo
+				.column.ta-center.main-header__menu
+					
+					ul.main-menu
+						li: a(href="#") О компании
+						li: a(href="#") Статьи
+						li: a(href="#") Вопросы-ответы
+						li: a(href="#") Контакты
+				.column.ta-right.main-header__contacts
+					a(href="tel: +78007006040").tel 8 800 700-60-40
+					a(href="#homeForm" title="Заказать выезд на дом", , ).btn.btn--redbd.scrollto Заказать выезд на дом
+				#navButton
+						span
+						span
+						span
+						span
+// /header

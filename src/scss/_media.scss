@@ -1,0 +1,498 @@
+
+@media screen and (max-width: 1199px){
+	/* -------------------------------
+		elements
+	------------------------------- */
+	.pad-lg{
+		padding: 80px 0;
+	}
+	h2{
+		@include fz(48,48);
+	}
+	.header-desc{
+		@include fz(16);
+	}
+	.contact-form{
+		&__body, &__header{
+			padding: 20px 25px;
+		}
+		&__body {
+			padding-top: 30px;
+			padding-bottom: 34px;
+		}
+	}
+
+	/* -------------------------------
+		/ elements
+	------------------------------- */
+	.main-header{
+		padding-right: 	59px;
+		#navButton{
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			margin-top: -7px;
+			z-index: 2;
+		}
+		&__contacts{
+			
+			position: relative;
+		}
+		.main-menu{
+			z-index: 1;
+			position: fixed;
+			right: -320px;
+
+			background: white;
+			background-color: rgba(white, .99);
+			text-align: right;
+			text-align-last: right;
+			top: 0;
+			padding: 50px;
+			padding-top: 100px;
+			padding-right: 100px;
+			height: 10000px;
+			box-shadow: 0 0 2px #666;
+
+			li{
+				display: block;
+				padding: 5px 15px;
+				&:before{
+					display: none;
+				}	
+			}
+
+		}
+	}
+
+	.home-start{
+		background-position: 80% center;
+		.header{
+			strong{
+				@include fz(60,60);
+			}
+		}
+
+	}
+
+	.home-form{
+		.btn{
+			width: 100%;
+		}
+	}
+
+	.health-card{
+		@include fz(16,24);
+	}
+
+	.home-service{
+		@include fz(18);
+
+	}
+
+	.quest-additional{
+		@include fz(48);
+		.col-md-6:first-child{
+			padding-top: 42px;
+		}
+	}
+
+	.main-footer{
+		.copyright{
+			margin: 0;
+			margin-top: 20px;
+		}
+		&__left{
+			position: relative;
+			bottom: -15px;
+			white-space:normal;
+		}
+	}
+	.team{
+		&-item{
+			padding-top: 50px;
+			.image{
+
+			}
+			.image img{
+				max-width: 286px;
+			}
+		}
+	}
+
+	.reviews{
+		&__item{
+			padding: 20px;
+			@include fz(14);
+			.name{
+				@include fz(18,18);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 992px){
+	/* -------------------------------
+		elements
+	------------------------------- */
+	h2{
+		@include fz(36,36);
+	}
+	.pad-lg{
+		padding: 47px 0;
+	}
+	/* -------------------------------
+		/ elements
+	------------------------------- */
+	
+
+	.home-form{
+		&__text{
+			padding-top: 0;
+			@include fz(16);
+		}
+		.contact-form{
+		&__header, &__body{
+			padding-left: 17px;
+			padding-right: 17px;
+		}
+		&__body{
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+		&__header{
+			@include fz(18);
+		}
+		&__body{
+			@include fz(14);
+		}
+		input[type="submit"]{
+			margin-top: 0;
+		}
+	}
+	}
+
+	.team{
+		&__header{
+			padding: 50px 0;
+		}
+	}
+	.quest-additional{
+		&, .tel {@include fz(36);}
+
+	}
+
+	.main-footer{
+		.social{
+			margin: 0;
+			display: block;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+		}
+		&__contacts{
+			position: relative;
+			padding-bottom: 50px;
+		}
+	}
+}
+@media screen and (max-width: 767px){
+	/* -------------------------------
+		elements
+	------------------------------- */
+	h2{
+		@include fz(29,30);
+	}
+	.header-desc{
+		@include fz(14,18);
+	}
+	.input-group{
+		input,.jq-selectbox{
+			width: 100%;
+			margin-left: 0  !important;
+			margin-right: 0 !important;
+		}
+	}
+	/* -------------------------------
+		/elements
+	------------------------------- */
+	.main-header{
+		padding: 22px 0;
+		.main-logo{
+			margin: 0;
+		}
+		.main-logo img{
+			display: none;
+		}
+		.mobile-logo{
+			display: block !important;
+		}
+	}
+	.home-start{
+		height: 522px;
+		min-height: 0;
+		background-position: 80% top;
+		.container{
+			margin-left: 0;
+		}
+		.header{
+			@include fz(24);
+			strong{
+				@include fz(30);
+
+			}
+		}
+		&__features{
+			overflow: hidden;
+			li{
+				margin-left: 30px;
+				float: left;
+				.ico{
+					text-align: center;
+				}
+				@include fz(14, 18);
+			}
+		}
+		&__inner{
+			.btn{
+				width: 100%;
+				max-width: 320px;
+			}
+		}
+		.mouse{
+			margin-bottom: -30px;
+		}
+	}
+
+	.main-header__contacts .tel{
+		display: none;
+
+	}
+	.contact-form{
+		@include fz(14);
+		&__body,&__header{
+			padding-left: 17px;
+			padding-right: 17px;
+		}
+		&__body{
+			padding-top: 14px;
+			padding-bottom: 14px;
+		}
+		&__header{
+			@include fz(15,15);
+		}
+		input[type="submit"]{
+			margin-top: 0;
+		}
+	}
+	.home-form{
+		&__right{
+			margin-bottom: 40px;
+		}
+		
+	}
+
+
+	.main-footer{
+		.main-logo{
+			img{
+				max-width: 107px;
+			}
+		}
+		.tel{
+			margin-right: 0;
+			@include fz(21);
+		}
+		.btn{
+			display: none;
+		}
+		.copyright{
+			white-space:normal;
+			@include fz(11);
+			color: black;
+			br{
+				display: block;
+			}
+		}
+		.social{
+			top: 3px;
+			bottom: auto;
+			li{
+				margin: 0 0px;
+			}
+		}
+		&__left{
+			bottom: 0;
+		}
+		&__contacts{
+			padding: 0;
+			padding-top: 50px;
+			.tel{
+				color: #403360;
+				font-weight: 900;
+			}
+			
+		}
+	}
+
+	.price-list{
+		margin-bottom: 20px;
+		&__footer{
+			.small-gray{
+				margin-bottom: 20px;
+			}
+			.btn{
+				width: 100%;
+				max-width: 320px;
+				float: left;
+			}
+		}
+	}
+
+	.home-service{
+.small-text{
+	display: none
+}
+	.with-small{
+		padding-bottom: 0;
+	}
+		&__footer{
+			span{
+				display: inline-block;
+				width: 120px;
+				float: left;
+				@include fz(24);
+				margin: 0;
+				&+a{
+					float: right;
+				}
+			}
+		}
+	}
+
+	.health-card{
+		img{
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+	}
+
+	.questions{
+		.quest{
+			font-size: 1em;
+		}
+		.answer{
+			@include fz(14);
+			padding-top: 17px;
+			padding-bottom: 17px;
+		}
+	}
+	.quest-additional{
+		@include fz(30);
+		padding: 35px 0;
+		.col-sm-6:first-child{
+			padding-top: 0;
+			margin-bottom: 10px;
+		}
+		.tel{
+			@include fz(30, 36);
+
+			span{
+				@include fz(18);
+			}
+		}
+	}
+
+	.team{
+
+		&-item{
+			
+			position: relative;
+			padding-top: 200px;
+			.text{
+				padding: 10px 0 40px;
+				@include fz(14,18);
+				.spec{
+					@include fz(18,30);
+				}
+				.name{
+					@include fz(24,60);
+				}
+			}
+			.image{
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				text-align: center;
+				height:200px;
+				border-bottom: 1px solid white;
+				animation:none;
+				img{
+					max-height: 100%;
+					width: auto;
+					max-width: 100%;
+				}
+			}
+		}
+		.swiper-controls{
+			top: 100px;
+			margin-top: -31px;
+			left: 0;
+			right: 0;
+			height: 0;
+		}
+		.swiper-prev,
+		.swiper-next{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		.swiper-next{
+			left: auto;
+			right: 0;
+		}
+	}
+
+	.reviews{
+		.swiper-wrapper{
+			margin-bottom: 0;
+		}
+		.swiper-pagination{
+			display: block;
+			margin: 30px 0;
+			&-bullet{
+				width: 17px;
+				height: 17px;
+				background: none;
+				border: 2px solid #403360;
+				opacity: 1;
+				&-active{
+					background-color: #403360;
+				}
+			}
+		}
+		.swiper-controls{
+			display: none;
+		}
+		.btn{
+			width: 100%;
+			margin-bottom: 8px;
+		}
+		.swiper-pagination{
+			position: static;
+		}
+		&__footer{
+			margin-bottom: 0;
+		}
+	}
+}
+@media screen and (max-width: 480px){
+	.main-header__contacts .btn{
+		display: none;
+	}
+	#navButton span{
+		background-color: #B2296E;
+	}
+}

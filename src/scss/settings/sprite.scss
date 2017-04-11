@@ -1,81 +1,88 @@
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-fb-name: 'icon-fb';
+$icon-fb-x: 0px;
+$icon-fb-y: 0px;
+$icon-fb-offset-x: 0px;
+$icon-fb-offset-y: 0px;
+$icon-fb-width: 32px;
+$icon-fb-height: 32px;
+$icon-fb-total-width: 64px;
+$icon-fb-total-height: 64px;
+$icon-fb-image: '../img/icon-set.png';
+$icon-fb: (0px, 0px, 0px, 0px, 32px, 32px, 64px, 64px, '../img/icon-set.png', 'icon-fb', );
+$icon-inst-name: 'icon-inst';
+$icon-inst-x: 32px;
+$icon-inst-y: 0px;
+$icon-inst-offset-x: -32px;
+$icon-inst-offset-y: 0px;
+$icon-inst-width: 32px;
+$icon-inst-height: 32px;
+$icon-inst-total-width: 64px;
+$icon-inst-total-height: 64px;
+$icon-inst-image: '../img/icon-set.png';
+$icon-inst: (32px, 0px, -32px, 0px, 32px, 32px, 64px, 64px, '../img/icon-set.png', 'icon-inst', );
+$icon-ok-name: 'icon-ok';
+$icon-ok-x: 0px;
+$icon-ok-y: 32px;
+$icon-ok-offset-x: 0px;
+$icon-ok-offset-y: -32px;
+$icon-ok-width: 32px;
+$icon-ok-height: 32px;
+$icon-ok-total-width: 64px;
+$icon-ok-total-height: 64px;
+$icon-ok-image: '../img/icon-set.png';
+$icon-ok: (0px, 32px, 0px, -32px, 32px, 32px, 64px, 64px, '../img/icon-set.png', 'icon-ok', );
+$icon-vk-name: 'icon-vk';
+$icon-vk-x: 32px;
+$icon-vk-y: 32px;
+$icon-vk-offset-x: -32px;
+$icon-vk-offset-y: -32px;
+$icon-vk-width: 32px;
+$icon-vk-height: 32px;
+$icon-vk-total-width: 64px;
+$icon-vk-total-height: 64px;
+$icon-vk-image: '../img/icon-set.png';
+$icon-vk: (32px, 32px, -32px, -32px, 32px, 32px, 64px, 64px, '../img/icon-set.png', 'icon-vk', );
+$spritesheet-width: 64px;
+$spritesheet-height: 64px;
+$spritesheet-image: '../img/icon-set.png';
+$spritesheet-sprites: ($icon-fb, $icon-inst, $icon-ok, $icon-vk, );
+$spritesheet: (64px, 64px, '../img/icon-set.png', $spritesheet-sprites, );
 
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-$mail-name: 'mail';
-$mail-x: 15px;
-$mail-y: 0px;
-$mail-offset-x: -15px;
-$mail-offset-y: 0px;
-$mail-width: 20px;
-$mail-height: 16px;
-$mail-total-width: 35px;
-$mail-total-height: 35px;
-$mail-image: 'icon-set.png';
-$mail: (15px, 0px, -15px, 0px, 20px, 16px, 35px, 35px, 'icon-set.png', 'mail', );
-$map-name: 'map';
-$map-x: 0px;
-$map-y: 0px;
-$map-offset-x: 0px;
-$map-offset-y: 0px;
-$map-width: 15px;
-$map-height: 23px;
-$map-total-width: 35px;
-$map-total-height: 35px;
-$map-image: 'icon-set.png';
-$map: (0px, 0px, 0px, 0px, 15px, 23px, 35px, 35px, 'icon-set.png', 'map', );
-$person-name: 'person';
-$person-x: 0px;
-$person-y: 23px;
-$person-offset-x: 0px;
-$person-offset-y: -23px;
-$person-width: 11px;
-$person-height: 12px;
-$person-total-width: 35px;
-$person-total-height: 35px;
-$person-image: 'icon-set.png';
-$person: (0px, 23px, 0px, -23px, 11px, 12px, 35px, 35px, 'icon-set.png', 'person', );
-$spritesheet-width: 35px;
-$spritesheet-height: 35px;
-$spritesheet-image: 'icon-set.png';
-$spritesheet-sprites: ($mail, $map, $person, );
-$spritesheet: (35px, 35px, 'icon-set.png', $spritesheet-sprites, );
-
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
-*/
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }
@@ -102,12 +109,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   @include sprite-height($sprite);
 }
 
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);

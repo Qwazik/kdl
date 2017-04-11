@@ -1,3 +1,243 @@
 extends _template
 
 block main
+	// home-start
+	.home-start.gray-bg
+		.container
+			.home-start__inner
+				.header
+					p.animated.fadeInDown.delay-2ms Анализы на дому!
+					p.animated.fadeInUp.delay-2ms: strong Выезд по Москве <br> бесплатно!
+				ul.home-start__features
+					li.animated.fadeIn.delay-2ms
+						.ico: i.icon-clock
+						p Выберите <br> удобное <br> время
+					li.animated.fadeIn.delay-4ms
+						.ico: i.icon-car
+						p Дождитесь <br> процедурную <br> бригаду
+					li.animated.fadeIn.delay-6ms
+						.ico: i.icon-microscope
+						p Получите <br> результаты <br> анализов
+				a(href="#homeForm", ).btn.btn--whitebd.animated.fadeIn.delay-6ms.scrollto Заказать выезд на дом
+		.mouse
+			.icon-mouse
+	// /home-start
+	// home-form
+	.home-form.pad-lg.gray-bg#homeForm
+		.container
+			.row
+				.col-lg-5.col-sm-6.home-form__right
+					.home-form__text
+						h2.header Выезд процедурной бригады осуществляется
+						p.time с 6:00
+						p Обращаем Ваше внимание, что заявки на выезд процедурной бригады на следующий день <br> принимаются до 17:00
+						p.small-gray * Выезд процедурной бригады осуществляется бесплатно, стоимость проведения процедур на дому оплачивается отдельно и рассчитывается по общему прейскуранту цен.
+				.col-lg-7.col-sm-6
+					.contact-form
+						.contact-form__header Заполните контактную информацию
+						.contact-form__body
+							form(action="#")
+								.input-group
+									input(type="text" placeholder="Введите ваше имя").input
+									input(type="tel" placeholder="Введите телефон").input
+									select.input
+										option(value="11.11.11") 11.11.11
+										option(value="11.11.11") 11.11.11
+										option(value="11.11.11") 11.11.11
+									select.input
+										option(value="11.11.11") 11.11.11
+										option(value="11.11.11") 11.11.11
+										option(value="11.11.11") 11.11.11
+								input(type="text", placeholder="Введите промокод").input
+								input(type="text", placeholder="Дополнительная информация").input
+							input(type="submit" value="Заказать выезд на дом").btn.btn--redbd.scrollto
+
+	// /home-form
+	// price
+	.page__price-list.pad-lg
+		.container
+			.header-offset
+				h2 Часто заказываемые исследование
+				p.header-desc Оставьте заявку, мы с вами свяжемся и все расскажем!
+			.price-list
+				.row
+					-for(var i=0;i<10;i++)
+						.col-sm-6
+							.price-list__item
+								p.name Абрикос антитела IgE
+								p.date 17.1.A102.201
+								span.price 300 руб
+			.price-list__footer
+				.row
+					.col-sm-6
+						.small-gray * Выезд процедурной бригады осуществляется бесплатно, стоимость проведения процедур на дому оплачивается отдельно и рассчитывается по общему прейскуранту цен.
+					.col-sm-6
+						a(href="#homeForm", ).scrollto.btn.btn--redbd Заказать выезд на дом
+	// /price
+	// service
+	.page__home-service.pad-lg.color-white
+		.container
+			.header-offset
+				h2 Какие исследования не проводятся на дому? 
+				p.header-desc Ограничения по взятию биоматериала на дому
+			.home-service
+				.row
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Взятие урогенитальных мазков и соскобов
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Соскоб кожи
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Взятие биоматериала на демодекс
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Пункции, биопсии и др. хирургические действия
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Взятие секрета предстательной железы
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Глюкозотолерантный тест
+					.col-sm-6: .home-service__item
+						.column
+							.ico
+						.column 
+							span Взятие мазков из раны
+					.col-sm-6: .home-service__item.with-small
+						.column
+							.ico
+						.column 
+							span Взятие на исследование волос и ногтей *
+							p.small-text * Биоматериал (волосы и ногти) пациент собирает сам и доставляет <br> в медицинский офис или передает выездной процедурной бригаде.
+			.home-service__footer
+				span.question-text Остались вопросы ?
+				a(href="#").btn.btn--whitebd.md Консультация
+	// /service
+	// health card
+	.health-card.pad-lg.color-white.gradient-bg
+		.container
+			.row
+				.col-sm-6
+					img(src="img/health-card.png", alt="Карта здоровья")
+				.col-sm-6
+					.header-offset
+						h2 Карта здоровья
+					p Это то, что поможет сохранить Ваше время и деньги! Она предоставляет систему скидок на все услуги лаборатории, а так же позволяет создать персональный архив результатов анализов в лабораторно-информационной системе компании.
+					ul.ul
+						li Присоединяйте к своей Карте Здоровья до 9 человек
+						li Копите и тратьте скидки вместе с семьей и друзьями
+						li Скидка начисляется на все 10 карт здоровья
+					a(href="#").btn.btn--whitebd Узнать подробнее
+	// /health card
+	// team
+	.team.gray-bg
+		.team__header
+			.container
+				h2 Наша команда
+				p.header-desc В команду попадает лишь 1 из 50 кандидатов:  важно, чтобы врач был хорош не только в работе, но и в общении с людьми.
+		.team__body
+			.container
+				.swiper-container.column1
+					.swiper-wrapper
+						.swiper-slide 
+							.team-item
+								.team-item__inner
+									.text
+										p.name.fadeInDown.animated Марина Азимова
+										p.spec.fadeInUp.animated Терапевт
+										p.desc.fadeInUp.animated Недавно закончила медицинский университет им. Пирогова. Врачом стала, потому что хотела этого с детства. В работе, да и в жизни для меня самое главное – помогать людям, а самое сложное и обидное – когда помочь не можешь.
+									.image.fadeIn.animated
+										img(src="img/team-person1.jpg", alt="")
+						.swiper-slide 
+							.team-item
+								.team-item__inner
+									.text
+										p.name.fadeInDown.animated Марина Азимова
+										p.spec.fadeInUp.animated Терапевт
+										p.desc.fadeInUp.animated Недавно закончила медицинский университет им. Пирогова. Врачом стала, потому что хотела этого с детства. В работе, да и в жизни для меня самое главное – помогать людям, а самое сложное и обидное – когда помочь не можешь.
+									.image.fadeIn.animated
+										img(src="img/team-person1.jpg", alt="")
+					.swiper-controls
+						button.swiper-prev: i.icon-arrow-l
+						button.swiper-next: i.icon-arrow
+
+	// /team
+	// reviews
+	.page__reviews.pad-lg
+		.container
+			.header-offset
+				h2 Отзывы клиентов
+			.reviews.swiper-container.column3
+				.swiper-wrapper
+					-for(var i = 0;i<3;i++)
+						.swiper-slide
+							.reviews__item
+								time.time(datetime="04-10-2016") 04 октября 2016
+								p.name Елена Николаева
+								p Хочу сказать огромное спасибо команде + за то, что несмотря на высокую загруженность педиатров, врач все-таки посетил нас в тот же день. Для меня этот было очень важно, так как ребенок  серьезно заболел. Спасибо за....
+				.swiper-pagination
+				.reviews__footer.clearfix
+					.swiper-controls
+						button.swiper-prev: i.icon-arrow-l
+						button.swiper-next: i.icon-arrow
+					a(href="#").btn.btn--redbd Все отзывы
+					a(href=".reviews__form").btn.btn--viobd.toggler Оставить отзыв
+				.reviews__form.animated.slideInDown
+					.contact-form
+						.contact-form__header Оставить отзыв
+						.contact-form__body
+							form(action="#")
+								.input-group
+									input(type="text" placeholder="Введите ваше имя").input
+									input(type="tel" placeholder="Введите e-mail или телефон").input
+									textarea(name="message", placeholder="Введите текст отзыва").input
+							input(type="submit" value="Отправить").btn.btn--redbd
+	// /reviews
+	// questions
+	.page__questions.pad-lg
+		.container
+			.header-offset
+				h2 Часто задаваемые вопросы
+			.questions
+				.questions__item
+					p.quest В каком районе вы работаете?
+					p.answer Выезды процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время. Процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время.
+				.questions__item
+					p.quest Как оплатить врача?
+					p.answer Выезды процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время. Процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время.
+				.questions__item
+					p.quest В каком районе вы работаете?
+					p.answer Выезды процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время. Процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время.
+				.questions__item
+					p.quest Можно ли получить бесплатную консультацию по телефону?
+					p.answer Выезды процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время. Процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время.
+				.questions__item
+					p.quest Вы работаете с экстренными случаями?
+					p.answer Выезды процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время. Процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время процедурной бригады осуществляются ежедневно с 6:00 до 16:00, в том числе в выходные и праздничные дни, в удобное для Вас время.
+			.questions__footer
+				a(href="#").btn.btn--redbd.md Больше вопросов
+	// /questions
+	// quest-additional
+	.quest-additional.gradient-bg-reverse.color-white
+		.container
+			.row
+				.col-sm-6
+					p Остались вопросы?
+				.col-sm-6.tel
+					span Позвоните нам
+					p 8 (800) 700-60-40
+	// /quest-additional

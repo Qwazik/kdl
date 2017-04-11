@@ -47,3 +47,18 @@
     }
   }
 }
+
+@mixin fz($val, $lh:false){
+  $font-size: $val / $bodyfont;
+  font-size: $font-size + rem;
+  @if($lh != false){
+    line-height: $lh / $val + em;
+  }
+}
+
+@mixin lh($val, $lh:false){
+  $font-size: $val / $bodyfont;
+  @if($lh != false){
+    line-height: $lh / $val + em;
+  }
+}
