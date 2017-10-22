@@ -163,19 +163,19 @@ function equalHeight(wrap, element){
     });
 }
 
-// if(location.origin == 'https://qwazik.github.io'){
-//     $('body').append($('<script type="text/javascript" src="https://cdn.rawgit.com/Qwazik/scripts/master/navGit.js"></script>'));
-//     $(window).load(function(){
-//         navGit({
-//             'Главная':'index.html',
-//             'Статьи':'articles.html',
-//             'О компании':'about.html',
-//             'Типовая':'inner.html',
-//             'Вопрос-ответ':'questions.html',
-//             'Контакты':'contacts.html'
-//         });
-//     });
-// }
+if(location.origin == 'https://qwazik.github.io'){
+    $('body').append($('<script type="text/javascript" src="https://cdn.rawgit.com/Qwazik/scripts/master/navGit.js"></script>'));
+    $(window).on('load', function(){
+        navGit({
+            'Главная':'index.html',
+            'Статьи':'articles.html',
+            'О компании':'about.html',
+            'Типовая':'inner.html',
+            'Вопрос-ответ':'questions.html',
+            'Контакты':'contacts.html'
+        });
+    });
+}
 
 
 	
